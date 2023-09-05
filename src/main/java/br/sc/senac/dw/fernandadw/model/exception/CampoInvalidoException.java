@@ -1,4 +1,4 @@
-package br.sc.senac.dw.fernandadw.controller;
+package br.sc.senac.dw.fernandadw.model.exception;
 
 public class CampoInvalidoException extends Exception {
 

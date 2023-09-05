@@ -1,4 +1,4 @@
-package br.sc.senac.dw.fernandadw;
+package br.sc.senac.dw.fernandadw.service;
 
 import java.util.List;
 
@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import br.sc.senac.dw.fernandadw.controller.CampoInvalidoException;
-import br.sc.senac.dw.fernandadw.controller.Produto;
-import br.sc.senac.dw.fernandadw.controller.ProdutoSeletor;
+import br.sc.senac.dw.fernandadw.model.entity.Produto;
+import br.sc.senac.dw.fernandadw.model.exception.CampoInvalidoException;
+import br.sc.senac.dw.fernandadw.model.repository.ProdutoRepository;
+import br.sc.senac.dw.fernandadw.model.seletor.ProdutoSeletor;
+import br.sc.senac.dw.fernandadw.model.specification.ProdutoSpecifications;
 
 @Service
 public class ProdutoService {

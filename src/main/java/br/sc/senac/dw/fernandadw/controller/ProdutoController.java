@@ -12,17 +12,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.sc.senac.dw.fernandadw.ProdutoService;
+import br.sc.senac.dw.fernandadw.model.entity.Produto;
+import br.sc.senac.dw.fernandadw.model.exception.CampoInvalidoException;
+import br.sc.senac.dw.fernandadw.model.seletor.ProdutoSeletor;
+import br.sc.senac.dw.fernandadw.service.ProdutoService;
 
 @RestController
-@RequestMapping(path = "/api/produtos")
+@RequestMapping(path = "/api/produtos") //caminho que o controlador vai responder
+// /produto???
 public class ProdutoController {
 
 	
 	@Autowired
 	private ProdutoService produtoService;
 	
-	@GetMapping(path = "/todos")
+	@GetMapping("/todos")  //quando faz uma requisição web, tem que informar qual é o verbo http que você está usando (GET, POST, ...)
 	public List<Produto> listarTodos() {
 		return produtoService.listarTodos();
 	}
