@@ -22,7 +22,6 @@ import br.sc.senac.dw.fernandadw.service.ProdutoService;
 // /produto???
 public class ProdutoController {
 
-	
 	@Autowired
 	private ProdutoService produtoService;
 	

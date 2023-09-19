@@ -20,3 +20,7 @@ CREATE TABLE exemplos.produtos (
 	CONSTRAINT produtos_pk PRIMARY KEY (id),
 	CONSTRAINT id_fabricante foreign key (id_fabricante) references exemplos.fabricantes(ID)
 );
+
+
+ALTER TABLE exemplos.fabricantes ADD cidade varchar(100) NOT NULL;
+ALTER TABLE exemplos.fabricantes ADD uf varchar(2) NOT NULL;
